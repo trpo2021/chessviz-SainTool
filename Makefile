@@ -1,10 +1,7 @@
-all: chessviz
-
-chessviz: Chess.o
-	gсс Chess.o -o chessviz
-
-Chess.o: Chess.c
-	gсс -Wall -Werror -c Chess.c 
+CFLANGS= -Wall -Werror
+all:chesss
+chesss: Chess.c
+	gcc $(CFLANGS) Chess.c
 
 clean:
-	rm -rf *.o chessviz
+	rm -rf *.o chesss
