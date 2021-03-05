@@ -1,11 +1,12 @@
 #include <stdio.h>
-void draw(char s[8][8]) // masive print
+#define Size_Board 8
+void draw_chessboard(char s[Size_Board][Size_Board])
 {
     printf("  __________________");
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < Size_Board; i++) {
         printf("\n");
         printf("%d |", i + 1);
-        for (int j = 0; j < 8; j++) {
+        for (int j = 0; j < Size_Board; j++) {
             if (s[i][j] != '-') {
                 printf("%c ", s[i][j]);
             } else
@@ -18,7 +19,7 @@ void draw(char s[8][8]) // masive print
 }
 int main()
 {
-    char chess[8][8] // Create masive chess
+    char chess[Size_Board][Size_Board]
             = {{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
                {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
                {'-', '-', '-', '-', '-', '-', '-', '-'},
@@ -28,5 +29,5 @@ int main()
                {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
                {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'}};
 
-    draw(chess);
+    draw_chessboard(chess);
 }
