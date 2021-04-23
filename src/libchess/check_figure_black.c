@@ -6,7 +6,7 @@
 //
 #define Number_of_shapes 6
 //
-int check_figure_black(char s)
+int check_figure_black(char **s, const int Size_Board)
 {
     char white_shapes[Number_of_shapes]
             = {{'p'}, {'r'}, {'n'}, {'b'}, {'q'}, {'k'}};
