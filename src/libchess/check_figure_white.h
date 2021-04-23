@@ -1,3 +1,3 @@
 #pragma once
 
-void check_figure_white(char s);
+int check_figure_white(char **s, const int Size_Board);
