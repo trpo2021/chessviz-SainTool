@@ -8,7 +8,7 @@
 #define Number_of_shapes 6
 #define Buffer 6
 //
-void draw_chessboard(char s[Size_Board][Size_Board])
+void draw_chessboard(char **s, const int Size_Board)
 {
     printf("  __________________");
     for (int i = 0; i < Size_Board; i++) {
