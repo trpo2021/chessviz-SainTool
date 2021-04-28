@@ -4,12 +4,9 @@
 //
 #include "check_figure_black.h"
 //
-#define Number_of_shapes 6
-//
-int check_figure_black(char **s, const int Size_Board)
+int check_figure_black(char s, const int Number_of_shapes)
 {
-    char white_shapes[Number_of_shapes]
-            = {{'p'}, {'r'}, {'n'}, {'b'}, {'q'}, {'k'}};
+    char white_shapes[7] = {"prnbqk"};
     for (int i = 0; i < Number_of_shapes; i++)
         if (s == white_shapes[i])
             return i;

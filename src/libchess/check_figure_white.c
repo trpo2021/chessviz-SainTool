@@ -4,12 +4,10 @@
 //
 #include "check_figure_white.h"
 //
-#define Number_of_shapes 6
-//
-int check_figure_white(char **s, const int Size_Board)
+int check_figure_white(char s)
 {
-    char white_shapes[Number_of_shapes]
-            = {{'P'}, {'R'}, {'N'}, {'B'}, {'Q'}, {'K'}};
+    int Number_of_shapes=6;
+    char white_shapes[7]= {"PRNBQK"};
     for (int i = 0; i < Number_of_shapes; i++)
         if (s == white_shapes[i])
             return i;
