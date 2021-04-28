@@ -3,3 +3,4 @@ Chess
 *.exe
 Makefile~
 *.out
+*.a
