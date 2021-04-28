@@ -7,12 +7,11 @@
 //
 void move_black(char **s, const int Size_Board)
 {
-    const int Buffer=6;
-    const int Number_of_shapes=7;
+    const int Buffer=7;
     int i, ii, xx;
     char a[Buffer];
     printf("\nBlack's move - ");
-    scanf("%c", a);
+    scanf("%s", a);
     char board_faces[10] = { "abcdefgh" };
     for (i = 0; i < Size_Board; i++) {
         if (a[0] == board_faces[i])
@@ -20,7 +19,7 @@ void move_black(char **s, const int Size_Board)
     }
     int x = a[1] - 49;
     char j = s[x][i];
-    switch (check_figure_black(j, Number_of_shapes)) {
+    switch (check_figure_black(j)) {
     case 0: // p
         for (ii = 0; ii < Size_Board; ii++)
             if (a[3] == board_faces[ii])
