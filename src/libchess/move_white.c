@@ -4,19 +4,17 @@
 //
 #include "check_figure_white.h"
 #include "move_white.h"
+
 //
-#define Size_Board 8
-#define Number_of_shapes 6
-#define Buffer 6
-//
-void move_white(char s[Size_Board][Size_Board])
+void move_white(char **s, const int Size_Board)
 {
+    const int Buffer=7;
     int i, ii, xx;
     char a[Buffer];
     printf("\nWhite's move - ");
-    scanf("%s", &a);
-    char board_faces[Size_Board]
-            = {{'a'}, {'b'}, {'c'}, {'d'}, {'e'}, {'f'}, {'g'}, {'h'}};
+    scanf("%s", a);
+    char board_faces[10]
+            = {"abcdefgh"};
     for (i = 0; i < Size_Board; i++) {
         if (a[0] == board_faces[i])
             break;
@@ -29,17 +27,17 @@ void move_white(char s[Size_Board][Size_Board])
             if (a[3] == board_faces[ii])
                 break;
         xx = a[4] - 49;
-        if (x == 6 and x - xx >= 1 and x - xx <= 2 and i == ii
-            and s[x - (x - xx)][i] == '-') {
+        if (x == 6 && x - xx >= 1 && x - xx <= 2 && i == ii
+            && s[x - (x - xx)][i] == '-') {
             s[x][i] = '-';
             s[x - (x - xx)][i] = 'P';
         } else {
-            if (x - xx == 1 and i == ii and s[x - 1][i] == '-') {
+            if (x - xx == 1 && i == ii && s[x - 1][i] == '-') {
                 s[x][i] = '-';
                 s[x - 1][i] = 'P';
             } else {
                 printf("Input ERROR");
-                move_white(s);
+                move_white(s, Size_Board);
             }
         }
         break;
@@ -60,7 +58,7 @@ void move_white(char s[Size_Board][Size_Board])
         break;
     default: // error
         printf("Input ERROR");
-        move_white(s);
+        move_white(s, Size_Board);
         break;
     };
 }
