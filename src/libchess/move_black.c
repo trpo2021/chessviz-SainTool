@@ -5,41 +5,38 @@
 #include "check_figure_black.h"
 #include "move_black.h"
 //
-#define Size_Board 8
-#define Number_of_shapes 6
-#define Buffer 6
-//
-void move_black(char s[Size_Board][Size_Board])
+void move_black(char **s, const int Size_Board)
 {
+    const int Buffer=6;
+    const int Number_of_shapes=7;
     int i, ii, xx;
     char a[Buffer];
     printf("\nBlack's move - ");
-    scanf("%s", &a);
-    char board_faces[Size_Board]
-            = {{'a'}, {'b'}, {'c'}, {'d'}, {'e'}, {'f'}, {'g'}, {'h'}};
+    scanf("%c", a);
+    char board_faces[10] = { "abcdefgh" };
     for (i = 0; i < Size_Board; i++) {
         if (a[0] == board_faces[i])
             break;
     }
     int x = a[1] - 49;
     char j = s[x][i];
-    switch (check_figure_black(j)) {
+    switch (check_figure_black(j, Number_of_shapes)) {
     case 0: // p
         for (ii = 0; ii < Size_Board; ii++)
             if (a[3] == board_faces[ii])
                 break;
         xx = a[4] - 49;
-        if (x == 1 and xx - x >= 1 and xx - x <= 2 and i == ii
-            and s[x + (xx - x)][i] == '-') {
+        if (x == 1 && xx - x >= 1 && xx - x <= 2 && i == ii
+            && s[x + (xx - x)][i] == '-') {
             s[x][i] = '-';
             s[x + (xx - x)][i] = 'p';
         } else {
-            if (xx - x == 1 and i == ii and s[x + 1][i] == '-') {
+            if (xx - x == 1 && i == ii && s[x + 1][i] == '-') {
                 s[x][i] = '-';
                 s[x + 1][i] = 'p';
             } else {
                 printf("Input ERROR");
-                move_black(s);
+                move_black(s,Size_Board);
             }
         }
     case 1: // r
@@ -59,7 +56,7 @@ void move_black(char s[Size_Board][Size_Board])
         break;
     default: // error
         printf("Input ERROR");
-        move_black(s);
+        move_black(s,Size_Board);
         break;
     };
 }

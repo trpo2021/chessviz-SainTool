@@ -1,3 +1,3 @@
 #pragma once
 
-void move_black(char s[Size_Board][Size_Board]);
+void move_black(char **s, const int Size_Board);
