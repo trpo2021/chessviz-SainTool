@@ -15,7 +15,7 @@ chess.exe: $(OBJ_SRC_CHESS)Chess.o $(OBJ_SRC_LIBCHESS)libchess.a
 $(OBJ_SRC_CHESS)Chess.o: $(SRC_CHESS)Chess.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 	
-$(OBJ_SRC_LIBCHESS)libchess.a: $(SRC_LIBCHESS)move_Pp.o $(SRC_LIBCHESS)defining_a_moving_shape.o $(SRC_LIBCHESS)draw_chessboard.o $(SRC_LIBCHESS)game_start.o $(SRC_LIBCHESS)move_pawn.o $(SRC_LIBCHESS)perevod_8to0_0to8.o $(SRC_LIBCHESS)placing_pieces_on_the_board.o
+$(OBJ_SRC_LIBCHESS)libchess.a: $(SRC_LIBCHESS)move_Pp.o $(SRC_LIBCHESS)defining_a_moving_shape.o $(SRC_LIBCHESS)draw_chessboard.o $(SRC_LIBCHESS)game_start.o $(SRC_LIBCHESS)move_shape.o $(SRC_LIBCHESS)perevod_8to0_0to8.o $(SRC_LIBCHESS)placing_pieces_on_the_board.o
 	ar rcs $@ $^
 
 $(OBJ_SRC_LIBCHESS)move_Pp.o: $(SRC_LIBCHESS)move_Pp.c
@@ -30,7 +30,7 @@ $(OBJ_SRC_LIBCHESS)draw_chessboard.o: $(SRC_LIBCHESS)draw_chessboard.c
 $(OBJ_SRC_LIBCHESS)game_start.o: $(SRC_LIBCHESS)game_start.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 	
-$(OBJ_SRC_LIBCHESS)move_pawn.o: $(SRC_LIBCHESS)move_pawn.c
+$(OBJ_SRC_LIBCHESS)move_shape.o: $(SRC_LIBCHESS)move_shape.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 	
 $(OBJ_SRC_LIBCHESS)perevod_8to0_0to8.o: $(SRC_LIBCHESS)perevod_8to0_0to8.c
@@ -45,5 +45,5 @@ clean:
 	rm $(OBJ_SRC_LIBCHESS)*.o chess
 
 -include move_Pp.d defining_a_moving_shape.d draw_chessboard.d
--include game_start.d move_pawn.d perevod_8to0_0to8.d placing_pieces_on_the_board.d
+-include game_start.d move_shape.d perevod_8to0_0to8.d placing_pieces_on_the_board.d
 
