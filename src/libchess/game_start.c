@@ -5,7 +5,7 @@
 //
 #include "placing_pieces_on_the_board.h"
 #include "draw_chessboard.h"
-#include "move_pawn.h"
+#include "move_shape.h"
 #include "game_start.h"
 
 //
@@ -21,10 +21,10 @@ void game_start()
     // test 10 move
     for (int i = 0; i < 5; i++) {
         draw_chessboard(chess, Size_Board);
-        move_pawn(chess, Size_Board, hod);
+        move_shape(chess, Size_Board, hod);
         hod--;
         draw_chessboard(chess, Size_Board);
-        move_pawn(chess, Size_Board, hod);
+        move_shape(chess, Size_Board, hod);
         draw_chessboard(chess, Size_Board);
         hod++;
     }
