@@ -19,5 +19,5 @@ void draw_chessboard(char **s, const int Size_Board)
         printf("|");
     }
     printf("\n  ------------------");
-    printf("\n   a b c d e f g h");
+    printf("\n   a b c d e f g h \n");
 }
