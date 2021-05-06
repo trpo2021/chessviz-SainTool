@@ -28,4 +28,7 @@ void game_start()
         draw_chessboard(chess, Size_Board);
         hod++;
     }
+    for (int i = 0; i < Size_Board ; i++)
+    	free(chess[i]);
+    free(chess);   
 }
