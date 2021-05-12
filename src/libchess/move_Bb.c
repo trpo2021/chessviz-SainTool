@@ -15,7 +15,7 @@ int move_Bb(
 	// input format pos_x_first, pos_y_first, pos_x_second, pos_y_second
 	// out format pos_y pos_x
 	int i = dont_eat_my_shape(s, pos_x_second, pos_y_second, hod);
-	int x_smesh = 0, j;
+	int j;
 	if (hod) {
 		//up
 		printf("%d %d %d %d %d", pos_y_first - pos_y_second > 0, i, pos_y_first - pos_y_second == pos_x_first - pos_x_second , pos_y_first - pos_y_second, pos_x_first - pos_x_second);
