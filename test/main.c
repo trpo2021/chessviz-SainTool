@@ -14,7 +14,7 @@
 #include "libchessviz/move_Rr.h"
 #include "libchessviz/move_shape.h"
 #include "libchessviz/perevod_8to0_0to8.h"
-#include "libchessviz/placing_pieces_on_the_board.h"a
+#include "libchessviz/placing_pieces_on_the_board.h" a
 
 int main(int argc, const char** argv)
 {
@@ -35,70 +35,70 @@ CTEST_SKIP(dont_eat_my_shape, test_skip)
     ASSERT_FAIL();
 }
 
-//draw_chessboard
+// draw_chessboard
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//game_start
+// game_start
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//move_Bb
+// move_Bb
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//move_Kk
+// move_Kk
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//move_Nn
+// move_Nn
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//move_Pp
+// move_Pp
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//move_Qq
+// move_Qq
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//move_Rr
+// move_Rr
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//move_shape
+// move_shape
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
 
-//perevod_8to0_0to8
+// perevod_8to0_0to8
 
 CTEST(perevod_8to0_0to8, test1)
 {
@@ -108,7 +108,6 @@ CTEST(perevod_8to0_0to8, test1)
 
     // Then
     ASSERT_FALSE(result);
-    
 }
 
 CTEST(perevod_8to0_0to8, test1)
@@ -119,7 +118,6 @@ CTEST(perevod_8to0_0to8, test1)
 
     // Then
     ASSERT_FALSE(result);
-    
 }
 
 CTEST(perevod_8to0_0to8, test2)
@@ -130,7 +128,6 @@ CTEST(perevod_8to0_0to8, test2)
 
     // Then
     ASSERT_FALSE(result);
-    
 }
 
 CTEST(perevod_8to0_0to8, test3)
@@ -141,7 +138,6 @@ CTEST(perevod_8to0_0to8, test3)
 
     // Then
     ASSERT_FALSE(result);
-    
 }
 
 CTEST(perevod_8to0_0to8, test4)
@@ -152,7 +148,6 @@ CTEST(perevod_8to0_0to8, test4)
 
     // Then
     ASSERT_FALSE(result);
-    
 }
 
 CTEST(perevod_8to0_0to8, test5)
@@ -163,13 +158,10 @@ CTEST(perevod_8to0_0to8, test5)
 
     // Then
     ASSERT_FALSE(result);
-    
 }
-//placing_pieces_on_the_board
+// placing_pieces_on_the_board
 
 CTEST_SKIP(dont_eat_my_shape, test_skip)
 {
     ASSERT_FAIL();
 }
-
-
