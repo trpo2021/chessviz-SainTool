@@ -6,6 +6,9 @@ BIN=bin/
 OBJ_SRC_CHESS = obj/src/chess/
 OBJ_SRC_LIBCHESS = obj/src/libchess/
 
+OBJ_TEST = obj/test
+THIRDPARTY = 
+
 SRC_CHESS = src/chess/
 SRC_LIBCHESS = src/libchess/
 
@@ -58,6 +61,12 @@ $(OBJ_SRC_LIBCHESS)move_Kk.o: $(SRC_LIBCHESS)move_Kk.c
 
 $(OBJ_SRC_LIBCHESS)move_Bb.o: $(SRC_LIBCHESS)move_Bb.c
 	$(CC) -c $(CFLAGS) -o $@ $<
+
+.PHONY: test
+
+test: $(BIN)test.exe
+
+$(BIN)test.exe: $()
 
 .PHONY: clean
 
