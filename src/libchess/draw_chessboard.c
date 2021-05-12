@@ -4,7 +4,7 @@
 //
 #include "draw_chessboard.h"
 //
-void draw_chessboard(char **s, const int Size_Board)
+void draw_chessboard(char** s, const int Size_Board)
 {
     printf("  __________________");
     for (int i = 0; i < Size_Board; i++) {

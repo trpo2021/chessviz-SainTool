@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 //
-#include "placing_pieces_on_the_board.h"
 #include "draw_chessboard.h"
-#include "move_shape.h"
 #include "game_start.h"
+#include "move_shape.h"
+#include "placing_pieces_on_the_board.h"
 
 //
 void game_start()
@@ -28,7 +28,7 @@ void game_start()
         draw_chessboard(chess, Size_Board);
         hod++;
     }
-    for (int i = 0; i < Size_Board ; i++)
-    	free(chess[i]);
-    free(chess);   
+    for (int i = 0; i < Size_Board; i++)
+        free(chess[i]);
+    free(chess);
 }
