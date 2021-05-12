@@ -1,0 +1,6 @@
+*.o
+Chess
+*.exe
+Makefile~
+*.out
+*.a
