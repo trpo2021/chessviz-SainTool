@@ -4,6 +4,11 @@
 #include "perevod_8to0_0to8.h"
 #include "defining_a_moving_shape.h"
 #include "move_Pp.h"
+#include "move_Nn.h"
+#include "move_Rr.h"
+#include "move_Bb.h"
+#include "move_Qq.h"
+#include "move_Kk.h"
 void move_shape(char** board, const int Size_Board, int hod)
 {
     const int Buffer = 7;
@@ -44,20 +49,65 @@ void move_shape(char** board, const int Size_Board, int hod)
             printf("Input ERROR");
             move_shape(board, Size_Board, hod);}
         break;
-    case 1: // Rr
-        printf("R");
+    case 1: // Rr-
+        if (!(
+                    move_Rr(board,
+                            pos_x_first,
+                            pos_x_second,
+                            pos_y_first,
+                            pos_y_second,
+                            Size_Board,
+                            hod))){
+            printf("Input ERROR");
+            move_shape(board, Size_Board, hod);}
         break;
     case 2: // Nn
-        printf("N");
+        if (!(
+                    move_Nn(board,
+                            pos_x_first,
+                            pos_x_second,
+                            pos_y_first,
+                            pos_y_second,
+                            Size_Board,
+                            hod))){
+            printf("Input ERROR");
+            move_shape(board, Size_Board, hod);}
         break;
     case 3: // Bb
-        printf("B");
+        if (!(
+                    move_Bb(board,
+                            pos_x_first,
+                            pos_x_second,
+                            pos_y_first,
+                            pos_y_second,
+                            Size_Board,
+                            hod))){
+            printf("Input ERROR");
+            move_shape(board, Size_Board, hod);}
         break;
-    case 4: // Qq
-        printf("Q");
+    case 4: // Qq-
+        if (!(
+                    move_Qq(board,
+                            pos_x_first,
+                            pos_x_second,
+                            pos_y_first,
+                            pos_y_second,
+                            Size_Board,
+                            hod))){
+            printf("Input ERROR");
+            move_shape(board, Size_Board, hod);}
         break;
-    case 5: // Kk
-        printf("K");
+    case 5: // Kk-
+        if (!(
+                    move_Kk(board,
+                            pos_x_first,
+                            pos_x_second,
+                            pos_y_first,
+                            pos_y_second,
+                            Size_Board,
+                            hod))){
+            printf("Input ERROR");
+            move_shape(board, Size_Board, hod);}
         break;
     default: // error
         printf("Input ERROR");
